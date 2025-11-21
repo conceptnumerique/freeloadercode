@@ -1,7 +1,6 @@
 <!-- Loader 1 | Loader Spinner Classique CSS uniquement -->
-
 <div class="loader-spinner"></div>
-
+<!-- Css Loader 1 -->
 <style>
 .loader-spinner {
   width: 50px;
@@ -16,13 +15,15 @@
   to { transform: rotate(360deg); }
 }
 </style>
+<!-- Fin Css Loader 1 -->
 <!-- Fin Loader 1 -->
+
 
 <!-- Loader 2 | Loader à 3 Points (dot loader) -->
 <div class="dots">
   <span></span><span></span><span></span>
 </div>
-
+<!-- Css Loader 2 -->
 <style>
 .dots {
   display: flex;
@@ -45,13 +46,15 @@
   to   { transform: translateY(-10px); opacity: 1; }
 }
 </style>
+<!-- Fin CSS Loader 2 -->
+<!-- Fin Loader 2 -->
+
 
 <!-- Loader 3 | Loader Barre de Progression (CSS + JS) -->
-
 <div class="loader-bar">
   <div class="progress"></div>
 </div>
-
+<!-- CSS Loader 3 -->
 <style>
 .loader-bar {
   width: 200px;
@@ -74,3 +77,95 @@
   100% { width: 0%; }
 }
 </style>
+<!-- Fin CSS Loader 3 -->
+<!-- Fin Loader 3 -->
+
+<!-- Loader 4 | Loader Anneaux Lumineux (CSS + JS) -->
+<div class="bg">
+  <div class="sparkles"></div>
+  <div class="rings-loader"></div>
+</div>
+<!-- CSS Loader 4 -->
+<style>
+  .bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0c0861;
+  }
+  .rings-loader {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 12px solid transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    background: conic-gradient(from 0deg, #4f46e5, #6366f1, #4f46e5);
+
+    -webkit-mask: radial-gradient(farthest-side, transparent 62%, #000 63%);
+    animation: spin 2.9s linear infinite;
+    position: relative;
+    display: inline-block;
+  }
+
+  .rings-loader::before,
+  .rings-loader::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top-color: #6366f1;
+    animation: spin 3.6s linear infinite;
+    opacity: 0.7;
+  }
+
+  .rings-loader::before {
+    width: 160px;
+    height: 160px;
+    border-top-color: #4f46e5;
+    border-bottom-color: #6366f1;
+    top: 0;
+    left: 0;
+  }
+  .rings-loader::after {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      #cd46e5 0%,
+      #ce67e1 25%,
+      #cd46e5 50%,
+      #db87ea 75%,
+      #d153e8 100%
+    );
+    -webkit-mask: radial-gradient(
+      circle,
+      transparent 45%,
+      #411548 50%,
+      #4c1a54 55%,
+      transparent 60%
+    );
+    mask: radial-gradient(
+      circle,
+      transparent 45%,
+      #e546c8 50%,
+      #912c7e 55%,
+      transparent 60%
+    );
+    animation: spin 2.9s linear infinite;
+    animation-direction: reverse;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin-reverse {
+  }
+</style>
+<!-- Fin CSS Loader 4 -->
+<!-- Fin Loader 4 -->
